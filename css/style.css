@@ -1,3 +1,107 @@
+.button {
+  transition: all 0.5s ease-in-out;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-box-shadow: 2px 14px 15px -9px rgba(130, 125, 125, 0.93);
+  box-shadow: 2px 14px 15px -9px rgba(130, 125, 125, 0.93);
+}
+.button:hover {
+  transform: scale(1.2);
+}
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  border-bottom: white 1px solid;
+  -webkit-box-shadow: 2px 14px 15px -6px rgba(130, 125, 125, 0.93);
+  box-shadow: 2px 14px 15px -6px rgba(130, 125, 125, 0.93);
+}
+header img {
+  width: 50%;
+  margin-left: 100px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.location {
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 19px;
+}
+.location__input {
+  background-color: #ededed;
+  width: 35%;
+  border: none;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.reserver {
+  background-color: #f7f7f7;
+  padding-top: 35px;
+  text-align: center;
+}
+.reserver h1 {
+  font-weight: bold;
+  font-size: 31px;
+}
+.reserver p {
+  font-size: 20px;
+}
+
+.working {
+  margin-left: 15px;
+}
+.working h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.working__step {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border: solid white 1px;
+  border-radius: 17px;
+  box-shadow: black 1px 1px 1px;
+  background-color: #f7f7f7;
+}
+.working__step:visited {
+  color: black;
+}
+.working__step:hover {
+  background-color: #efe6fa;
+}
+.working__step:hover i {
+  color: #9356DC;
+}
+.working__step span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: white;
+  margin-left: -10px;
+  background-color: #9356DC;
+  border-radius: 50%;
+}
+.working__step i {
+  color: #a4a4a4;
+}
 
 /*# sourceMappingURL=style.css.map */

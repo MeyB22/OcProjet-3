@@ -1,0 +1,14 @@
+.button{
+  transition: all 0.5s ease-in-out;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  background: linear-gradient(170deg,$secondary-color,$primary-color);
+  -webkit-box-shadow: 2px 14px 15px -9px rgba(130,125,125,0.93);
+  box-shadow: 2px 14px 15px -9px rgba(130,125,125,0.93);
+  &:hover{
+    transform: scale(1.2);
+
+  }
+}

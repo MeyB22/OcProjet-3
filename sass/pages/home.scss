@@ -1,0 +1,89 @@
+body{
+  font-family: "Roboto",sans-serif;
+}
+
+header{
+  img{
+    width: 50%;
+    margin-left: 100px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  border-bottom: white 1px solid;
+  -webkit-box-shadow: 2px 14px 15px -6px rgba(130,125,125,0.93);
+  box-shadow: 2px 14px 15px -6px rgba(130,125,125,0.93);
+}
+.location{
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 19px;
+   &__input{
+     background-color: $grey;
+     width: 35%;
+    border: none;
+     margin-left: 4px;
+     font-weight: bold;
+  }
+}
+.reserver{
+  background-color: $lightgrey;
+  padding-top: 35px;
+  text-align: center;
+  h1{
+    font-weight: bold;
+    font-size: 31px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+.working{
+  margin-left: 15px;
+  h2{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &__step{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: solid white 1px;
+    border-radius: 17px;
+    box-shadow: black 1px 1px 1px;
+    background-color: $lightgrey;
+     &:visited{
+       color: black;
+     }
+    &:hover{
+      background-color: lighten($primary-color,34%);
+        i{
+          color: $primary-color;
+        }
+      }
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      color: white;
+      margin-left: -10px;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+    i{
+      color: #a4a4a4;
+
+    }
+  }
+}
