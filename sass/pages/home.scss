@@ -30,11 +30,12 @@ header{
 }
 .reserver{
   background-color: $lightgrey;
-  padding-top: 35px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   text-align: center;
   h1{
     font-weight: bold;
-    font-size: 31px;
+    font-size: 33px;
   }
   p{
     font-size: 20px;
@@ -43,13 +44,14 @@ header{
 .working{
   margin-left: 15px;
   h2{
-    font-size: 30px;
+    padding-top: 20px;
+    font-size: 28px;
     font-weight: bold;
   }
   &__step{
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-bottom: 15px;
     width: 85%;
     display: flex;
@@ -57,9 +59,9 @@ header{
     gap: 20px;
     text-decoration: none;
     font-weight: bold;
-    border: solid white 1px;
     border-radius: 17px;
-    box-shadow: black 1px 1px 1px;
+    -webkit-box-shadow: 5px 5px 15px -1px rgba(100,100,100,0.67);
+    box-shadow: 5px 5px 15px -1px rgba(100,100,100,0.67);
     background-color: $lightgrey;
      &:visited{
        color: black;
@@ -85,5 +87,10 @@ header{
       color: #a4a4a4;
 
     }
+  }
+}
+.restaurants{
+  h2{
+    margin-left: 15px;
   }
 }
