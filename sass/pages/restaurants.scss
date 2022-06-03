@@ -1,0 +1,67 @@
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo{
+    flex: 3;
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 75px;
+    margin-left: 0;
+  }
+  a{
+    display: block;
+    flex: 1;
+    margin-left: 10px;
+    i{
+      font-weight: bold;
+      font-size: 20px;
+    }
+    &:visited{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+.imgresto{
+  width: 100%;
+  object-fit: cover;
+  z-index: -10;
+  position: relative;
+}
+.main{
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -45px;
+  padding-bottom: 45px;
+  background-color: $grey;
+}
+section{
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -10px;
+    h1{
+      font-family: Shrikhand,sans-serif ;
+    }
+  }
+}
+.menutitle{
+  margin-left: 10px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  &:after{
+    border-bottom: 4px $tertiary-color solid;
+    content: "";
+    width: 15%;
+    display: block;
+    margin-top: 10px;
+  }
+}
+.btn-resto{
+  margin-top: 45px;
+  text-align: center;
+}
+

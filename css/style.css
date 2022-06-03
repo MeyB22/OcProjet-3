@@ -4,6 +4,7 @@
   align-items: center;
   gap: 20px;
   background-color: #f7f7f7;
+  margin-bottom: 60px;
 }
 .cards__item {
   text-decoration: none;
@@ -48,7 +49,7 @@
 
 .button {
   transition: all 0.5s ease-in-out;
-  padding: 15px 20px;
+  padding: 15px 25px;
   border-radius: 30px;
   color: white;
   border: none;
@@ -62,7 +63,6 @@
 
 footer {
   background-color: #353535;
-  margin-top: 60px;
   padding-bottom: 15px;
   padding-top: 20px;
   padding-left: 20px;
@@ -113,6 +113,81 @@ footer ul li a:visited {
   opacity: 0;
   transition: all 2s ease-in-out;
   transform: scale(0);
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-animation: fade-in-bottom 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-bottom 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.menu__box {
+  height: 75px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-shadow: 0 10px 13px -7px #000000, -4px 8px 26px 4px rgba(158, 158, 158, 0.72);
+  box-shadow: 0 10px 13px -7px #000000, -4px 8px 26px 4px rgba(158, 158, 158, 0.72);
+}
+.menu__box:visited {
+  color: black;
+}
+.menu__box--content {
+  width: 80%;
+}
+.menu__box--content h3 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.menu__box--content p {
+  margin-top: 5px;
+}
+.menu__box--check {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu__box--prix {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
 body {
@@ -211,6 +286,76 @@ header img {
 
 .restaurants h2 {
   margin-left: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo {
+  flex: 3;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-right: 75px;
+  margin-left: 0;
+}
+header a {
+  display: block;
+  flex: 1;
+  margin-left: 10px;
+}
+header a i {
+  font-weight: bold;
+  font-size: 20px;
+}
+header a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.imgresto {
+  width: 100%;
+  object-fit: cover;
+  z-index: -10;
+  position: relative;
+}
+
+.main {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -45px;
+  padding-bottom: 45px;
+  background-color: #ededed;
+}
+
+section .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -10px;
+}
+section .title h1 {
+  font-family: Shrikhand, sans-serif;
+}
+
+.menutitle {
+  margin-left: 10px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.menutitle:after {
+  border-bottom: 4px #99E2D0 solid;
+  content: "";
+  width: 15%;
+  display: block;
+  margin-top: 10px;
+}
+
+.btn-resto {
+  margin-top: 45px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
