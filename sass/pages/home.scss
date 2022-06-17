@@ -1,11 +1,69 @@
 body{
   font-family: "Roboto",sans-serif;
 }
-
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes diappear {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.loader{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  animation: diappear 3s ease-in-out forwards;
+}
+.loader-1{
+  width: 48px;
+  height: 48px;
+  border: 5px solid #afafaf;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: rotation 1s linear infinite;
+  animation: rotate-center 1s linear infinite;
+}
+.content{
+  animation: appear 3s ease-in-out;
+}
 header{
   img{
     width: 50%;
-    margin-left: 100px;
     margin-bottom: 25px;
     margin-top: 25px;
   }
@@ -92,5 +150,34 @@ header{
 .restaurants{
   h2{
     margin-left: 15px;
+    font-size: 28px;
   }
+}
+@media screen and (min-width: 1000px){
+ header{
+   img{
+     width: 20%;
+   }
+ }
+  .location{
+    &__input{
+      width: 10%;
+    }
+  }
+  .working{
+    &__queries{
+      display: flex;
+      flex-direction: row;
+      margin-left: 60px;
+      gap: 60px;
+    }
+    &__step{
+      width: 25%;
+      gap: 20px;
+    }
+  }
+  .loader{
+    left: 47%;
+  }
+
 }

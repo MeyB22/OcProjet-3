@@ -64,4 +64,12 @@ section{
   margin-top: 45px;
   text-align: center;
 }
-
+@media screen and (min-width: 1000px){
+ header{
+   .logo{
+   }
+ }
+  .imgresto{
+    height: 300px;
+  }
+}
