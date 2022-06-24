@@ -49,10 +49,10 @@
 @media screen and (min-width: 1000px) {
   .cards{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-left: 80px;
     gap: 30px;
     &__item{
       width: 45%;

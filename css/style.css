@@ -50,10 +50,10 @@
 @media screen and (min-width: 1000px) {
   .cards {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-left: 80px;
     gap: 30px;
   }
   .cards__item {
@@ -165,6 +165,19 @@ footer ul li a:visited {
     opacity: 1;
   }
 }
+/**
+ * ----------------------------------------
+ * animation rotate
+ * ----------------------------------------
+ */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .menu {
   display: flex;
   flex-direction: column;
@@ -173,7 +186,7 @@ footer ul li a:visited {
   animation: fade-in-bottom 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 .menu__box {
-  height: 75px;
+  height: 70px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -181,27 +194,94 @@ footer ul li a:visited {
   margin-left: 10px;
   margin-right: 10px;
   padding-left: 15px;
-  padding-right: 15px;
   -webkit-box-shadow: 0 10px 13px -7px #000000, -4px 8px 26px 4px rgba(158, 158, 158, 0.72);
   box-shadow: 0 10px 13px -7px #000000, -4px 8px 26px 4px rgba(158, 158, 158, 0.72);
+  transition: all 1s;
 }
 .menu__box:visited {
   color: black;
 }
-.menu__box--content {
+.menu__box:hover {
+  justify-content: space-between;
+  padding-right: 0;
+}
+.menu__box:hover .menu__box--check {
+  width: 20%;
+  height: 100%;
+  margin-right: 0;
+  opacity: 1;
+  transition: all 1s;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.menu__box:hover .menu__box--check .fa-circle-check {
+  color: white;
+  animation: rotate 600ms linear;
+}
+.menu__box:hover .menu__box--content {
+  width: 80%;
+  transition: all 1s ease-in-out;
+}
+.menu__box:hover .menu__box--content .menu__box--texte {
   width: 80%;
 }
-.menu__box--content h3 {
-  font-weight: bold;
-  margin-bottom: 0;
+.menu__box:hover .menu__box--content .menu__box--texte h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
 }
-.menu__box--content p {
-  margin-top: 5px;
+.menu__box:hover .menu__box--content .menu__box--texte p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
+}
+.menu__box:hover .menu__box--prix {
+  justify-content: center;
+}
+.menu__box--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 10px;
+  height: 70px;
+  white-space: nowrap;
+  transition: all 1s ease-in-out;
+}
+.menu__box--content .menu__box--texte {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70px;
+}
+.menu__box--content .menu__box--texte h3 {
+  font-weight: bold;
+  margin: 0;
+}
+.menu__box--content .menu__box--texte p {
+  margin: 5px 0 0 0;
 }
 .menu__box--check {
   width: 0;
   opacity: 0;
   visibility: hidden;
+  transition: all 1s;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.menu__box--check .fa-circle-check {
+  color: white;
+  font-size: 28px;
 }
 .menu__box--prix {
   display: flex;
@@ -209,8 +289,17 @@ footer ul li a:visited {
   width: 20%;
   margin-top: 30px;
   font-weight: bold;
+  padding-right: 15px;
 }
 
+@media screen and (min-width: 1000px) {
+  .menu {
+    flex-direction: row;
+  }
+  .menu__box {
+    width: 30%;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -279,6 +368,8 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
   border-bottom: white 1px solid;
   -webkit-box-shadow: 2px 14px 15px -6px rgba(130, 125, 125, 0.93);
   box-shadow: 2px 14px 15px -6px rgba(130, 125, 125, 0.93);
@@ -373,6 +464,10 @@ header img {
 }
 
 @media screen and (min-width: 1000px) {
+  .loader {
+    left: 47%;
+  }
+
   header img {
     width: 20%;
   }
@@ -381,6 +476,9 @@ header img {
     width: 10%;
   }
 
+  .working h2 {
+    text-align: center;
+  }
   .working__queries {
     display: flex;
     flex-direction: row;
@@ -392,16 +490,16 @@ header img {
     gap: 20px;
   }
 
-  .loader {
-    left: 47%;
+  .restaurants h2 {
+    margin-left: 4%;
   }
 }
-header {
+.enteteresto {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .logo {
+.enteteresto .logo {
   flex: 3;
   width: 50%;
   margin-bottom: 20px;
@@ -409,16 +507,16 @@ header .logo {
   padding-right: 75px;
   margin-left: 0;
 }
-header a {
+.enteteresto a {
   display: block;
   flex: 1;
   margin-left: 10px;
 }
-header a i {
+.enteteresto a i {
   font-weight: bold;
   font-size: 20px;
 }
-header a:visited {
+.enteteresto a:visited {
   text-decoration: none;
   color: black;
 }
@@ -467,9 +565,32 @@ section .title h1 {
 }
 
 @media screen and (min-width: 1000px) {
-  .imgresto {
-    height: 300px;
+  .enteteresto {
+    justify-content: flex-start;
   }
+  .enteteresto .logo {
+    flex: none;
+    width: 20%;
+  }
+  .enteteresto a {
+    flex: none;
+    margin-right: 38%;
+  }
+
+  .main {
+    width: 90%;
+    margin: -55px auto 50px auto;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .imgresto {
+    height: 500px;
+  }
+}
+section .title {
+  justify-content: center;
+  gap: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
